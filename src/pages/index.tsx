@@ -1,12 +1,7 @@
 import * as React from 'react';
-import Button from '@material-ui/core/Button';
-import Dialog from '@material-ui/core/Dialog';
-import DialogActions from '@material-ui/core/DialogActions';
-import DialogContent from '@material-ui/core/DialogContent';
-import DialogContentText from '@material-ui/core/DialogContentText';
-import DialogTitle from '@material-ui/core/DialogTitle';
 import Typography from '@material-ui/core/Typography';
 import withStyles, { WithStyles, StyleRulesCallback } from '@material-ui/core/styles/withStyles';
+import { Grid } from '@material-ui/core';
 
 const styles: StyleRulesCallback<'root'> = theme => ({
   root: {
@@ -40,26 +35,19 @@ const Index = withStyles(styles)(
     render() {
       return (
         <div className={this.props.classes.root}>
-          <Dialog open={this.state.open} onClose={this.handleClose}>
-            <DialogTitle>My first example!</DialogTitle>
-            <DialogContent>
-              <DialogContentText>Dialog</DialogContentText>
-            </DialogContent>
-            <DialogActions>
-              <Button color="primary" onClick={this.handleClose}>
-                OK
-              </Button>
-            </DialogActions>
-          </Dialog>
-          <Typography variant="display1" gutterBottom>
-            Suna-Asobi
-          </Typography>
-          <Typography variant="subheading" gutterBottom>
-            example project
-          </Typography>
-          <Button variant="raised" color="secondary" onClick={this.handleClick}>
-            start
-          </Button>
+          <div>
+            <Typography variant="display1" gutterBottom>
+              Suna-Asobi
+            </Typography>
+            <Typography variant="subheading" gutterBottom>
+              example project
+            </Typography>
+          </div>
+          <div>
+            <Grid container>
+              <Grid item>コンテンツ</Grid>
+            </Grid>
+          </div>
         </div>
       );
     }

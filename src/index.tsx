@@ -4,8 +4,8 @@ import RootRouter from './pages/root-router';
 import { MuiThemeProvider, CssBaseline, createMuiTheme, Color } from '@material-ui/core';
 import { green, purple } from '@material-ui/core/colors';
 
-const primary: Color = purple;
-const secondary: Color = green;
+const primary: Color = green;
+const secondary: Color = purple;
 
 const theme = createMuiTheme({
   palette: {
